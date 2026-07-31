@@ -2,13 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Chi siamo - Eurocollezionismo Torino</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obiettivi dell’Associazione</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
+  <img src="img/logo.jpg" class="logo-small" alt="Logo Eurocollezionismo Torino">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="chi-siamo.html">Chi siamo</a></li>
     <li><a href="storia.html">Storia</a></li>
@@ -20,31 +31,59 @@
   </ul>
 </nav>
 
-<nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="storia.html">Storia</a></li>
-    <li><a href="obiettivi.html">Obiettivi</a></li>
-    <li><a href="prenotazioni.html">Prenotazioni</a></li>
-    <li><a href="foto-curiosita.html">Foto e curiosità</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-    <li><a href="area-soci.html">Area soci</a></li>
-  </ul>
-</nav>
+<!-- HERO -->
+<header class="hero">
+  <h1>I nostri obiettivi</h1>
+  <p>Promuovere la numismatica moderna e supportare i collezionisti</p>
+</header>
 
-<section>
-  <h2>Chi siamo</h2>
+<!-- CONTENUTO -->
+<section class="content-section">
+  <h2>Missione dell’associazione</h2>
   <p>
-    Eurocollezionismo Torino è un’associazione dedicata alla numismatica moderna,
-    con particolare attenzione alle monete euro commemorative e circolanti.
+    Eurocollezionismo Torino nasce con l’obiettivo di creare un punto di riferimento
+    per tutti gli appassionati di monete euro: un luogo dove condividere conoscenze,
+    scambi, attività e iniziative dedicate alla numismatica moderna.
   </p>
 </section>
 
-<footer>
-  <p>© 2026 Eurocollezionismo Torino</p>
-</footer>
+<section class="content-section">
+  <h2>Obiettivi principali</h2>
 
-</body>
-</html>
+  <div class="grid">
+    <div class="card">
+      <h3>📦 Prenotazioni emissioni</h3>
+      <p>
+        Garantire ai soci la possibilità di prenotare le nuove emissioni euro
+        in modo semplice, organizzato e trasparente.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🤝 Scambi e incontri</h3>
+      <p>
+        Favorire gli scambi tra collezionisti e organizzare incontri periodici
+        dedicati alla numismatica moderna.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📚 Formazione e divulgazione</h3>
+      <p>
+        Promuovere la conoscenza delle monete euro, delle loro varianti,
+        delle commemorative e delle emissioni speciali.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🔍 Trasparenza gestionale</h3>
+      <p>
+        Mantenere una gestione chiara e verificabile delle attività,
+        dei versamenti e delle prenotazioni dei soci.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💻 Digitalizzazione</h3>
+      <p>
+        Sviluppare strumenti digital

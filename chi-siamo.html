@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="UTF-8">
   <title>Chi siamo - Eurocollezionismo Torino</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    menu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  }
+</script>
+
 <body>
+
 <nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
+  <img src="img/logo.jpg" class="logo-small" alt="Logo Eurocollezionismo Torino">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="chi-siamo.html">Chi siamo</a></li>
     <li><a href="storia.html">Storia</a></li>
@@ -20,30 +40,80 @@
   </ul>
 </nav>
 
-<nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="storia.html">Storia</a></li>
-    <li><a href="obiettivi.html">Obiettivi</a></li>
-    <li><a href="prenotazioni.html">Prenotazioni</a></li>
-    <li><a href="foto-curiosita.html">Foto e curiosità</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-    <li><a href="area-soci.html">Area soci</a></li>
-  </ul>
-</nav>
 
-<section>
-  <h2>Chi siamo</h2>
-  <p>
-    Eurocollezionismo Torino è un’associazione dedicata alla numismatica moderna,
-    con particolare attenzione alle monete euro commemorative e circolanti.
-  </p>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Chi siamo</h1>
+    <p>La comunità dei collezionisti di monete euro a Torino</p>
+  </div>
 </section>
 
+<!-- CONTENUTO PRINCIPALE -->
+<section class="content-section">
+  <h2>La nostra storia e la nostra passione</h2>
+  <p>
+    Eurocollezionismo Torino è un’associazione culturale dedicata alla numismatica moderna,
+    con particolare attenzione alle monete euro circolanti e commemorative.  
+    Nasce con l’obiettivo di creare un punto di riferimento per appassionati, collezionisti,
+    studiosi e curiosi che desiderano approfondire la storia, la cultura e il valore delle monete.
+  </p>
+
+  <h3>La nostra missione</h3>
+  <p>
+    Promuovere la conoscenza della numismatica attraverso attività, incontri, scambi,
+    mostre e iniziative aperte al pubblico.  
+    Crediamo che ogni moneta racconti una storia: un evento, un luogo, un simbolo,
+    un momento importante della nostra identità europea.
+  </p>
+
+  <h3>Il direttivo</h3>
+  <div class="card-container">
+    <div class="card">
+      <h4>Presidente</h4>
+      <p>Coordina le attività dell’associazione e rappresenta il gruppo nelle iniziative pubbliche.</p>
+    </div>
+
+    <div class="card">
+      <h4>Vicepresidente</h4>
+      <p>Supporta l’organizzazione degli eventi e mantiene i rapporti con i soci.</p>
+    </div>
+
+    <div class="card">
+      <h4>Segreteria</h4>
+      <p>Gestisce comunicazioni, iscrizioni, documentazione e archivio numismatico.</p>
+    </div>
+
+    <div class="card">
+      <h4>Responsabile eventi</h4>
+      <p>Organizza incontri, scambi, esposizioni e attività culturali.</p>
+    </div>
+  </div>
+
+  <h3>I nostri valori</h3>
+  <ul class="values-list">
+    <li>Passione per la numismatica</li>
+    <li>Condivisione e collaborazione</li>
+    <li>Trasparenza e correttezza</li>
+    <li>Crescita culturale e divulgazione</li>
+    <li>Rispetto per la storia e per il collezionismo</li>
+  </ul>
+
+  <h3>Cosa facciamo</h3>
+  <ul class="activities-list">
+    <li>Incontri tra soci</li>
+    <li>Scambi e valutazioni</li>
+    <li>Mostre tematiche</li>
+    <li>Eventi culturali</li>
+    <li>Progetti di catalogazione</li>
+    <li>Collaborazioni con altre realtà numismatiche</li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Eurocollezionismo Torino</p>
+  <p>© 2026 Eurocollezionismo Torino — Associazione Numismatica</p>
 </footer>
 
 </body>

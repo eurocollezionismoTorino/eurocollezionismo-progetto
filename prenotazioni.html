@@ -2,14 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Chi siamo - Eurocollezionismo Torino</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prenotazioni Emissioni Euro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
+  <img src="img/logo.jpg" class="logo-small" alt="Logo Eurocollezionismo Torino">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="chi-siamo.html">Chi siamo</a></li>
     <li><a href="storia.html">Storia</a></li>
@@ -21,17 +31,93 @@
   </ul>
 </nav>
 
-<section>
-  <h2>Chi siamo</h2>
+<!-- HERO -->
+<header class="hero">
+  <h1>Prenotazioni emissioni euro</h1>
+  <p>Organizzazione, trasparenza e disponibilità garantita per i soci</p>
+</header>
+
+<!-- CONTENUTO -->
+<section class="content-section">
+  <h2>Come funzionano le prenotazioni</h2>
   <p>
-    Eurocollezionismo Torino è un’associazione dedicata alla numismatica moderna,
-    con particolare attenzione alle monete euro commemorative e circolanti.
+    L’associazione gestisce le prenotazioni delle nuove emissioni euro per garantire
+    ai soci la possibilità di ottenere le monete desiderate senza stress e senza code.
+    Ogni prenotazione viene registrata, confermata e consegnata in modo trasparente.
   </p>
 </section>
 
+<section class="content-section">
+  <h2>Tipologie di emissioni prenotabili</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🪙 Commemorative 2€</h3>
+      <p>
+        Prenotazione delle nuove commemorative dei vari Stati membri,
+        con disponibilità garantita per i soci.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💼 Serie annuali</h3>
+      <p>
+        Possibilità di prenotare le serie divisionali ufficiali,
+        sia in versione FDC che proof.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📦 Monete speciali</h3>
+      <p>
+        Emissioni particolari, folder, coincard e versioni limitate
+        disponibili su richiesta.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🔔 Avvisi immediati</h3>
+      <p>
+        Notifiche sulle nuove emissioni e possibilità di prenotare
+        direttamente durante gli incontri sociali.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2>Modalità di prenotazione</h2>
+  <ul class="values-list">
+    <li><strong>Durante gli incontri</strong> — prenotazioni dirette con il direttivo.</li>
+    <li><strong>Via messaggio</strong> — conferma rapida e registrazione immediata.</li>
+    <li><strong>Area Soci (in sviluppo)</strong> — prenotazioni digitali e tracciate.</li>
+  </ul>
+</section>
+
+<section class="content-section">
+  <h2>Trasparenza e gestione</h2>
+  <p>
+    Ogni prenotazione viene registrata e consegnata con ricevuta.
+    I soci possono verificare in qualsiasi momento le proprie prenotazioni,
+    i versamenti e le consegne.
+  </p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Eurocollezionismo Torino</p>
+  <p>© 2026 Eurocollezionismo Torino — Associazione Numismatica</p>
 </footer>
+
+<!-- SCRIPT HAMBURGER -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    menu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

@@ -2,14 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Richiedi iscrizione - Eurocollezionismo Torino</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richiedi iscrizione</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
+  <img src="img/logo.jpg" class="logo-small" alt="Logo Eurocollezionismo Torino">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="chi-siamo.html">Chi siamo</a></li>
     <li><a href="storia.html">Storia</a></li>
@@ -21,30 +31,66 @@
   </ul>
 </nav>
 
-<section>
-  <h2>Richiedi iscrizione</h2>
-  <p>Compila il modulo per richiedere l’iscrizione all’associazione. Verrai contattato dal direttivo per la conferma.</p>
+<!-- HERO -->
+<header class="hero">
+  <h1>Richiedi iscrizione</h1>
+  <p>Compila il modulo per entrare a far parte dell’associazione</p>
+</header>
 
-  <form action="mailto:eurocollezionismotorino@gmail.com" method="post" enctype="text/plain">
-    <label>Nome e cognome:</label><br>
-    <input type="text" name="nome" required><br><br>
+<!-- CONTENUTO -->
+<section class="content-section">
+  <h2>Modulo di richiesta</h2>
+  <p>
+    Compila il modulo qui sotto per inviare la tua richiesta di iscrizione.
+    Verrai contattato dal direttivo per confermare l’adesione e ricevere tutte le informazioni utili.
+  </p>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+  <form action="mailto:eurocollezionismotorino@gmail.com" method="post" enctype="text/plain" class="form-box">
 
-    <label>Telefono:</label><br>
-    <input type="tel" name="telefono"><br><br>
+    <label>Nome e cognome:</label>
+    <input type="text" name="nome" required>
 
-    <label>Messaggio:</label><br>
-    <textarea name="messaggio" rows="5" cols="40"></textarea><br><br>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Telefono:</label>
+    <input type="tel" name="telefono">
+
+    <label>Messaggio:</label>
+    <textarea name="messaggio" rows="5"></textarea>
 
     <button type="submit" class="cta-button">Invia richiesta</button>
   </form>
 </section>
 
+<section class="content-section">
+  <h2>Cosa succede dopo</h2>
+  <p>
+    Una volta inviata la richiesta:
+  </p>
+
+  <ul class="values-list">
+    <li><strong>Riceverai una conferma via email</strong> dal direttivo.</li>
+    <li><strong>Ti verranno fornite le informazioni</strong> su incontri, attività e prenotazioni.</li>
+    <li><strong>Potrai partecipare subito</strong> alle iniziative dell’associazione.</li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Eurocollezionismo Torino — Associazione Numismatica</p>
 </footer>
+
+<!-- SCRIPT HAMBURGER -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    menu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

@@ -2,13 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Chi siamo - Eurocollezionismo Torino</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foto e Curiosità</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
+  <img src="img/logo.jpg" class="logo-small" alt="Logo Eurocollezionismo Torino">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="chi-siamo.html">Chi siamo</a></li>
     <li><a href="storia.html">Storia</a></li>
@@ -20,31 +31,81 @@
   </ul>
 </nav>
 
-<nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="storia.html">Storia</a></li>
-    <li><a href="obiettivi.html">Obiettivi</a></li>
-    <li><a href="prenotazioni.html">Prenotazioni</a></li>
-    <li><a href="foto-curiosita.html">Foto e curiosità</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-    <li><a href="area-soci.html">Area soci</a></li>
-  </ul>
-</nav>
+<!-- HERO -->
+<header class="hero">
+  <h1>Foto e curiosità</h1>
+  <p>Immagini, dettagli e particolarità dal mondo delle monete euro</p>
+</header>
 
-<section>
-  <h2>Chi siamo</h2>
+<!-- CONTENUTO -->
+<section class="content-section">
+  <h2>Galleria fotografica</h2>
   <p>
-    Eurocollezionismo Torino è un’associazione dedicata alla numismatica moderna,
-    con particolare attenzione alle monete euro commemorative e circolanti.
+    Una selezione di immagini dedicate alle monete euro, alle commemorative,
+    alle varianti e alle curiosità che rendono la numismatica moderna così affascinante.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="img/foto1.jpg" alt="Moneta commemorativa" class="gallery-img">
+      <h3>Commemorative 2€</h3>
+      <p>Dettagli e varianti delle emissioni più ricercate.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/foto2.jpg" alt="Serie divisionale" class="gallery-img">
+      <h3>Serie annuali</h3>
+      <p>Le serie ufficiali dei vari Stati membri.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/foto3.jpg" alt="Folder numismatico" class="gallery-img">
+      <h3>Folder e coincard</h3>
+      <p>Edizioni speciali e confezioni da collezione.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/foto4.jpg" alt="Dettaglio moneta" class="gallery-img">
+      <h3>Dettagli e particolari</h3>
+      <p>Analisi di incisioni, simboli e micro-dettagli.</p>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2>Curiosità numismatiche</h2>
+  <ul class="values-list">
+    <li><strong>Varianti di conio</strong> — alcune monete presentano differenze minime che le rendono rare.</li>
+    <li><strong>Errori di stampa</strong> — piccoli difetti che aumentano il valore collezionistico.</li>
+    <li><strong>Emissioni limitate</strong> — tirature ridotte che diventano molto ricercate.</li>
+    <li><strong>Simboli nascosti</strong> — dettagli artistici presenti solo su alcune emissioni.</li>
+  </ul>
+</section>
+
+<section class="content-section">
+  <h2>Contributi dei soci</h2>
+  <p>
+    La galleria è in continua espansione grazie alle foto inviate dai soci.
+    Durante gli incontri è possibile condividere immagini, curiosità e scoperte
+    numismatiche che arricchiscono la collezione comune.
   </p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Eurocollezionismo Torino</p>
+  <p>© 2026 Eurocollezionismo Torino — Associazione Numismatica</p>
 </footer>
+
+<!-- SCRIPT HAMBURGER -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    menu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

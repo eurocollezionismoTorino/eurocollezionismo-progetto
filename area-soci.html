@@ -2,13 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Chi siamo - Eurocollezionismo Torino</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area Soci</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
+  <img src="img/logo.jpg" class="logo-small" alt="Logo Eurocollezionismo Torino">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="chi-siamo.html">Chi siamo</a></li>
     <li><a href="storia.html">Storia</a></li>
@@ -20,64 +31,77 @@
   </ul>
 </nav>
 
-<section>
-  <h2>Area Soci</h2>
-  <p>Accedi all’area riservata dell’associazione per gestire prenotazioni, versamenti, eventi e comunicazioni.</p>
+<!-- HERO -->
+<header class="hero">
+  <h1>Area Soci</h1>
+  <p>Accesso riservato ai membri dell’associazione</p>
+</header>
 
-  <div class="login-box">
-    <h3>Accesso riservato</h3>
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Accedi</button>
-	<button onclick="resetPassword()">Password dimenticata?</button>
+<!-- CONTENUTO -->
+<section class="content-section">
+  <h2>Accesso riservato</h2>
+  <p>
+    L’Area Soci permette di accedere a funzioni riservate dell’associazione:
+  </p>
 
-  </div>
-
-  <p>Se non hai le credenziali, contatta il direttivo.</p>
+  <ul class="values-list">
+    <li><strong>Gestione prenotazioni</strong> — visualizza e controlla le tue prenotazioni.</li>
+    <li><strong>Versamenti e ricevute</strong> — consulta lo storico dei tuoi movimenti.</li>
+    <li><strong>Documenti riservati</strong> — regolamenti, verbali, comunicazioni interne.</li>
+    <li><strong>Notifiche</strong> — avvisi su nuove emissioni e attività.</li>
+  </ul>
 </section>
 
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<section class="content-section">
+  <h2>Login soci</h2>
+  <p>
+    L’accesso digitale è in fase di sviluppo. Nel frattempo, puoi utilizzare il pulsante
+    qui sotto per accedere alla versione provvisoria dell’Area Soci.
+  </p>
 
-<script>
-  const firebaseConfig = {
-    apiKey: "INSERISCI_API_KEY",
-    authDomain: "INSERISCI_AUTH_DOMAIN",
-    projectId: "INSERISCI_PROJECT_ID"
-  };
+  <div class="centered">
+    <a class="cta-button" href="https://eurocollezionismotorino.web.app">
+      Accedi all’Area Soci
+    </a>
+  </div>
+</section>
 
-  firebase.initializeApp(firebaseConfig);
+<section class="content-section">
+  <h2>Progetto Area Soci digitale</h2>
+  <p>
+    L’associazione sta sviluppando una piattaforma digitale basata su Firebase per offrire
+    ai soci un sistema moderno, sicuro e sempre aggiornato. Il progetto prevede:
+  </p>
 
-  function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+  <ul class="values-list">
+    <li><strong>Login con autenticazione sicura</strong></li>
+    <li><strong>Dashboard personale</strong></li>
+    <li><strong>Storico prenotazioni</strong></li>
+    <li><strong>Gestione versamenti</strong></li>
+    <li><strong>Notifiche automatiche</strong></li>
+    <li><strong>Area documenti riservati</strong></li>
+  </ul>
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(() => {
-        window.location.href = "https://eurocollezionismotorino.web.app"; // web app soci
-      })
-      .catch(error => {
-        alert("Errore: " + error.message);
-      });
-  }
-function resetPassword() {
-  const email = document.getElementById("email").value;
+  <p>
+    La versione definitiva sarà integrata direttamente nel sito ufficiale.
+  </p>
+</section>
 
-  firebase.auth().sendPasswordResetEmail(email)
-    .then(() => {
-      alert("Ti abbiamo inviato un'email per reimpostare la password.");
-    })
-    .catch(error => {
-      alert("Errore: " + error.message);
-    });
-}
-
-</script>
-
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Eurocollezionismo Torino</p>
+  <p>© 2026 Eurocollezionismo Torino — Associazione Numismatica</p>
 </footer>
+
+<!-- SCRIPT HAMBURGER -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    menu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

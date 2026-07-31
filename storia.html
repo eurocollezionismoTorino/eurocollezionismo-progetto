@@ -2,13 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Chi siamo - Eurocollezionismo Torino</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia dell’Associazione</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
+  <img src="img/logo.jpg" class="logo-small" alt="Logo Eurocollezionismo Torino">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="chi-siamo.html">Chi siamo</a></li>
     <li><a href="storia.html">Storia</a></li>
@@ -20,31 +31,64 @@
   </ul>
 </nav>
 
-<nav class="navbar">
-  <img src="img/logo.jpg" class="logo-small" alt="Logo">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="storia.html">Storia</a></li>
-    <li><a href="obiettivi.html">Obiettivi</a></li>
-    <li><a href="prenotazioni.html">Prenotazioni</a></li>
-    <li><a href="foto-curiosita.html">Foto e curiosità</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-    <li><a href="area-soci.html">Area soci</a></li>
-  </ul>
-</nav>
+<!-- HERO -->
+<header class="hero">
+  <h1>La nostra storia</h1>
+  <p>Dalle prime monete alle attività di oggi</p>
+</header>
 
-<section>
-  <h2>Chi siamo</h2>
+<!-- CONTENUTO -->
+<section class="content-section">
+  <h2>Le origini</h2>
   <p>
-    Eurocollezionismo Torino è un’associazione dedicata alla numismatica moderna,
-    con particolare attenzione alle monete euro commemorative e circolanti.
+    Eurocollezionismo Torino nasce dall’iniziativa di un piccolo gruppo di appassionati
+    di numismatica moderna, uniti dalla volontà di condividere conoscenze, scambi e
+    curiosità sulle monete euro. Le prime attività risalgono ai primi anni 2000,
+    quando le emissioni euro iniziarono a diventare oggetto di collezione.
   </p>
 </section>
 
+<section class="content-section">
+  <h2>Crescita dell’associazione</h2>
+  <p>
+    Con il passare degli anni il gruppo si è ampliato, coinvolgendo collezionisti di
+    tutte le età e provenienze. Sono nate le prime cene sociali, gli incontri dedicati
+    alle nuove emissioni e le attività di scambio tra soci.
+  </p>
+
+  <ul class="timeline">
+    <li><strong>2002</strong> — Prime collezioni euro e scambi informali</li>
+    <li><strong>2008</strong> — Nascono le prime attività strutturate</li>
+    <li><strong>2015</strong> — Crescita del gruppo e nuove iniziative</li>
+    <li><strong>2020</strong> — Digitalizzazione delle prenotazioni</li>
+    <li><strong>2024</strong> — Progetto Area Soci online</li>
+  </ul>
+</section>
+
+<section class="content-section">
+  <h2>Oggi</h2>
+  <p>
+    Oggi l’associazione è un punto di riferimento per chi colleziona monete euro:
+    prenotazioni garantite, scambi, incontri, attività culturali e un sistema digitale
+    in continua evoluzione per rendere la numismatica moderna accessibile a tutti.
+  </p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Eurocollezionismo Torino</p>
+  <p>© 2026 Eurocollezionismo Torino — Associazione Numismatica</p>
 </footer>
+
+<!-- SCRIPT HAMBURGER -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    menu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
